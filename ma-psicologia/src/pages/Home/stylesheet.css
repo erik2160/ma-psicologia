@@ -47,12 +47,12 @@ nav {
     color: var(--white-basic);
 }
 
-nav p {
+nav a {
     cursor: pointer;
     height: 2vh;
 }
 
-nav p,
+nav a,
 img:hover {
     cursor: pointer;
     color: var(--gray-basic);
