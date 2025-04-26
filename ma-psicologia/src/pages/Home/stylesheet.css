@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --green-light: #69807a;
+    --green-dark: #476c5e;
+    --white-basic: #ffffff;
+    --gray-basic: #f0f2f1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter";
+    display: flexbox;
+}
+
+body {
+    background-color: var(--green-light);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    width: auto;
+    height: 10vh;
+    position: sticky;
+    position: relative;
+}
+
+.header-logo-image {
+    width: 10vh;
+    height: 6vh;
+    margin-top: -1vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5vh;
+    padding: 4vh;
+    color: var(--white-basic);
+}
+
+nav p {
+    cursor: pointer;
+    height: 2vh;
+}
+
+nav p,
+img:hover {
+    cursor: pointer;
+    color: var(--gray-basic);
+}
+
+.landing-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: var(--white-basic);
+    width: 90%;
+}
+
+.landing-section h1 {
+    font-size: 3rem;
+    margin-bottom: 21px;
+}
+.landing-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 44px;
+}
+
+.landing-section button {
+    width: 16rem;
+    height: 4rem;
+    border: none;
+    border-radius: 20px;
+    color: var(--green-light);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.landing-section button:hover {
+    transform: scale(1.05);
+}
+.landing-section img {
+    width: 60rem;
+}
+
+.white-background {
+    background-color: var(--white-basic);
+    width: 95%;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.stats-section {
+    display: flex;
+    gap: 128px;
+}
+.stats-section div {
+    border: 1px solid var(--green-dark);
+    border-radius: 16px;
+    width: 256px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--green-dark);
+}
+.stats-section div img {
+    margin-bottom: 21px;
+}
