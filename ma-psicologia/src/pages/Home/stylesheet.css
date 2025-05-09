@@ -5,16 +5,25 @@
     --green-dark: #476c5e;
     --white-basic: #ffffff;
     --gray-basic: #f0f2f1;
+
+    /* Unidades relativas para responsividade */
+    --font-size-base: 1rem;
+    --spacing-unit: 1rem;
+    --radius-lg: 3rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.5rem;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--green-light);
+    font-size: var(--font-size-base);
 }
 
 main {
@@ -25,225 +34,346 @@ main {
 }
 
 header {
-    width: auto;
-    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--green-light);
 }
 
+header i.fa-bars {
+    display: none;
+    color: var(--white-basic);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 .header-logo-image {
-    width: 10vh;
-    height: 6vh;
-    margin-top: -1vh;
+    width: 7.5rem;
+    height: auto;
+    cursor: pointer;
 }
 
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
-    gap: 5vh;
-    padding: 4vh;
+    gap: 4vh;
+    padding: 3vh 2vh;
     color: var(--white-basic);
 }
 
 nav a {
+    height: min-content;
     cursor: pointer;
-    height: 2vh;
+    align-content: center;
+    padding: 0.3rem;
+    text-decoration: none;
+    color: var(--gray-basic);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
 }
 
-nav a,
-img:hover {
-    cursor: pointer;
-    color: var(--gray-basic);
+nav a:hover {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    font-weight: bold;
 }
 
 .landing-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     color: var(--white-basic);
     width: 90%;
+    gap: var(--spacing-unit);
 }
 
 .landing-section h1 {
     font-size: 3rem;
-    margin-bottom: 21px;
+    margin-bottom: 1.5rem;
 }
+
 .landing-section h2 {
     font-size: 1.5rem;
-    margin-bottom: 44px;
+    margin-bottom: 2.5rem;
 }
 
 .landing-section button {
-    width: 16rem;
+    width: 100%;
+    max-width: 16rem;
     height: 4rem;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     color: var(--green-light);
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
 .landing-section button:hover {
     transform: scale(1.05);
 }
+
 .landing-section img {
-    width: 60rem;
+    width: 100%;
+    max-width: 60rem;
 }
 
 .white-background {
     background-color: var(--white-basic);
     width: 95%;
-    border-radius: 50px;
+    border-radius: var(--radius-lg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
-    padding: 90px 0;
+    gap: 6rem;
+    padding: 5rem 0;
 }
 
 .stats-section {
     display: flex;
-    gap: 128px;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
 }
+
 .stats-section div {
     border: 1px solid var(--green-dark);
-    border-radius: 16px;
-    width: 256px;
-    height: 128px;
+    border-radius: var(--radius-md);
+    width: 16rem;
+    height: 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--green-dark);
 }
-.stats-section div img {
-    margin-bottom: 21px;
+
+.stats-section div i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
+
 .about-section {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 2rem;
     width: 90%;
     color: var(--green-dark);
     background-color: var(--gray-basic);
-    padding: 50px;
-    border-radius: 50px;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--green-dark);
 }
+
 .about-title {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     text-align: center;
+    gap: 0.5rem;
 }
+
 .about-title h3 {
     font-size: 2rem;
 }
 
 .about-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
     font-size: 1.2rem;
-    gap: 10%;
+    align-items: center;
+    text-align: start;
 }
+
 .about-content img {
     width: 100%;
+    max-width: 500px;
 }
+
 .about-images {
     display: grid;
     grid-template-columns: 200px 200px;
+    gap: 1rem;
 }
+
 .services-section {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
 }
+
 .services-title {
     color: var(--green-dark);
     text-align: center;
 }
+
 .services-cards {
     display: flex;
-    gap: 100px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
+
 .service-card {
-    width: 300px;
-    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: var(--radius-md);
     border: 1px solid rgba(0, 0, 0, 0.51);
     box-shadow: 0 5px 4px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
 .service-card img {
     width: 100%;
 }
+
 .service-card-text {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.2rem;
     color: var(--green-dark);
     border-top: 1px solid rgba(0, 0, 0, 0.282);
-    padding: 20px 10px;
+    padding: 1.5rem 1rem;
 }
+
 .appointment-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
+    gap: 2rem;
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
     color: var(--white-basic);
     text-align: center;
+    padding: 2rem;
 }
+
 .appointment-title h3 {
-    font-size: 40px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
+
 .appointment-buttons {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
+
 .appointment-buttons button {
-    width: 16rem;
+    width: 100%;
+    max-width: 16rem;
     height: 4rem;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     color: var(--green-light);
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
+.appointment-buttons button:hover {
+    transform: scale(1.05);
+}
+
 footer {
     background-color: var(--white-basic);
     display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: start;
-    padding: 50px 10px;
-    position: relative;
+    padding: 3rem 1rem;
 }
 
 footer img {
     align-self: center;
+    max-width: 400px;
 }
-.services-footer a,
-.fast-links-footer a {
-    text-decoration: none;
-    color: var(--green-light);
-}
+
 .services-footer,
 .fast-links-footer,
 .contact-footer {
     display: flex;
     flex-direction: column;
     color: var(--green-light);
-    gap: 20px;
+    gap: 1.2rem;
+}
+
+.services-footer a,
+.fast-links-footer a {
+    text-decoration: none;
+    color: var(--green-light);
 }
 
 .contact-footer i {
-    width: 20px;
-    margin-right: 10px;
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+
+    header i.fa-bars {
+        display: block;
+    }
+
+    nav {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.2s ease;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--green-light);
+        width: 100%;
+        gap: 10px;
+        pointer-events: none;
+    }
+
+    nav.active {
+        max-height: 500px; /* valor alto suficiente para o conteúdo */
+        opacity: 1;
+        box-shadow: 0px 70px 50px 20px rgba(0, 0, 0, 0.315);
+        pointer-events: all;
+    }
+
+    main {
+        gap: 10rem;
+    }
+
+    .landing-section {
+        margin-top: 70px;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .landing-section img {
+        display: none;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-images {
+        grid-template-columns: 100%;
+    }
+
+    footer img {
+        width: 100%;
+    }
 }
