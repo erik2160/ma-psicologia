@@ -140,9 +140,8 @@ img:hover {
     gap: 10px;
     text-align: center;
 }
-.about-title h3{
+.about-title h3 {
     font-size: 2rem;
-
 }
 
 .about-content {
@@ -159,29 +158,29 @@ img:hover {
     display: grid;
     grid-template-columns: 200px 200px;
 }
-.services-section{
+.services-section {
     display: flex;
     flex-direction: column;
-    gap:40px;
+    gap: 40px;
 }
-.services-title{
+.services-title {
     color: var(--green-dark);
-    text-align:center;
+    text-align: center;
 }
-.services-cards{
-    display:flex;
-    gap: 100px
+.services-cards {
+    display: flex;
+    gap: 100px;
 }
-.service-card{
+.service-card {
     width: 300px;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.51);
     box-shadow: 0 5px 4px 1px rgba(0, 0, 0, 0.25);
 }
-.service-card img{
+.service-card img {
     width: 100%;
 }
-.service-card-text{
+.service-card-text {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -189,8 +188,8 @@ img:hover {
     border-top: 1px solid rgba(0, 0, 0, 0.282);
     padding: 20px 10px;
 }
-.appointment-section{
-    display:flex;
+.appointment-section {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
@@ -199,15 +198,15 @@ img:hover {
     color: var(--white-basic);
     text-align: center;
 }
-.appointment-title h3{
+.appointment-title h3 {
     font-size: 40px;
 }
-.appointment-buttons{
-    display:flex;
+.appointment-buttons {
+    display: flex;
     justify-content: center;
     gap: 50px;
 }
-.appointment-buttons button{
+.appointment-buttons button {
     width: 16rem;
     height: 4rem;
     border: none;
@@ -217,4 +216,34 @@ img:hover {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+}
+footer {
+    background-color: var(--white-basic);
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 50px 10px;
+    position: relative;
+}
+
+footer img {
+    align-self: center;
+}
+.services-footer a,
+.fast-links-footer a {
+    text-decoration: none;
+    color: var(--green-light);
+}
+.services-footer,
+.fast-links-footer,
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 20px;
+}
+
+.contact-footer i {
+    width: 20px;
+    margin-right: 10px;
 }

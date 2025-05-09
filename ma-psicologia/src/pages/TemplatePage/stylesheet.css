@@ -22,7 +22,6 @@ header {
     width: auto;
     height: 10vh;
     position: sticky;
-    position: relative;
 }
 
 .header-logo-image {
@@ -40,13 +39,44 @@ nav {
     color: var(--white-basic);
 }
 
-nav p {
+nav a {
     cursor: pointer;
     height: 2vh;
 }
 
-nav p,
+nav a,
 img:hover {
     cursor: pointer;
     color: var(--gray-basic);
+    text-decoration: none;
+}
+footer {
+    background-color: var(--white-basic);
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 50px 10px;
+    position: relative;
+}
+
+footer img {
+    align-self: center;
+}
+.services-footer a,
+.fast-links-footer a {
+    text-decoration: none;
+    color: var(--green-light);
+}
+.services-footer,
+.fast-links-footer,
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 20px;
+}
+
+.contact-footer i {
+    width: 20px;
+    margin-right: 10px;
 }
