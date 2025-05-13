@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --green-light: #69807A;
-    --green-dark: #476C5E;
-    --white-basic: #FFFFFF;
-    --gray-basic: #F0F2F1;
+    --green-light: #69807a;
+    --green-dark: #476c5e;
+    --white-basic: #ffffff;
+    --gray-basic: #f0f2f1;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Inter';
+    font-family: "Inter";
     display: flexbox;
 }
 
@@ -18,11 +18,10 @@ body {
     background-color: var(--green-light);
 }
 
-.header {
+header {
     width: auto;
     height: 10vh;
     position: sticky;
-    position: relative;
 }
 
 .header-logo-image {
@@ -31,7 +30,7 @@ body {
     margin-top: -1vh;
 }
 
-.header-content {
+nav {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -40,13 +39,44 @@ body {
     color: var(--white-basic);
 }
 
-.header-content p {
+nav a {
     cursor: pointer;
     height: 2vh;
 }
 
-.header-content p,
+nav a,
 img:hover {
     cursor: pointer;
     color: var(--gray-basic);
+    text-decoration: none;
+}
+footer {
+    background-color: var(--white-basic);
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 50px 10px;
+    position: relative;
+}
+
+footer img {
+    align-self: center;
+}
+.services-footer a,
+.fast-links-footer a {
+    text-decoration: none;
+    color: var(--green-light);
+}
+.services-footer,
+.fast-links-footer,
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 20px;
+}
+
+.contact-footer i {
+    width: 20px;
+    margin-right: 10px;
 }
