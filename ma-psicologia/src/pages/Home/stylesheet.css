@@ -102,8 +102,15 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
 }
+.landing-section i {
+    font-size: 2rem;
+}
 
 .landing-section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     width: 100%;
     max-width: 16rem;
     height: 4rem;
@@ -253,8 +260,10 @@ nav a:hover {
     width: 100%;
     min-height: 60vh;
     color: var(--white-basic);
-    text-align: center;
     padding: 2rem;
+}
+.appointment-title {
+    text-align: center;
 }
 
 .appointment-title h3 {
@@ -262,28 +271,61 @@ nav a:hover {
     font-size: 2.5rem;
 }
 
-.appointment-buttons {
+.appointment-content {
+    background-color: var(--white-basic);
+    color: var(--green-light);
+    border-radius: var(--radius-lg);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: space-between;
+    height: max-content;
+}
+.appointment-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0 40px 40px;
+}
+.appointment-info {
+    display: flex;
+    justify-content: space-between;
+}
+.maria-info {
+    margin-right: 20px;
 }
 
-.appointment-buttons button {
+.appointment-section a {
+    background-color: var(--green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     max-width: 16rem;
     height: 4rem;
     border: none;
     border-radius: var(--radius-lg);
-    color: var(--green-light);
+    color: var(--gray-basic);
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-.appointment-buttons button:hover {
+.appointment-section a:hover {
     transform: scale(1.05);
+}
+
+.appointment-section a i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.map {
+    border-top-right-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+    overflow: hidden;
 }
 
 footer {
