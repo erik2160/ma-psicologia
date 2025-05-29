@@ -19,3 +19,11 @@ window.addEventListener("click", function (e) {
     });
   }
 });
+
+function redirectToPsicoterapiaPage() {
+  window.location.href = "../Psicoterapia/index.html";
+}
+
+function redirectToNeuropsicologiaPage() {
+  window.location.href = "../Neuropsicologia/index.html";
+}
