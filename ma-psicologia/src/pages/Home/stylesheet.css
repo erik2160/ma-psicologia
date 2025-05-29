@@ -1,36 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --green-light: #69807a;
-  --green-dark: #476c5e;
-  --white-basic: #ffffff;
-  --gray-basic: #f0f2f1;
+    --green-light: #69807a;
+    --green-dark: #476c5e;
+    --white-basic: #ffffff;
+    --gray-basic: #f0f2f1;
 
-  /* Unidades relativas para responsividade */
-  --font-size-base: 1rem;
-  --spacing-unit: 1rem;
-  --radius-lg: 3rem;
-  --radius-md: 1rem;
-  --radius-sm: 0.5rem;
+    /* Unidades relativas para responsividade */
+    --font-size-base: 1rem;
+    --spacing-unit: 1rem;
+    --radius-lg: 3rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.5rem;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
 }
 
 body {
-  background-color: var(--green-light);
-  font-size: var(--font-size-base);
+    background-color: var(--green-light);
+    font-size: var(--font-size-base);
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
 }
 
 /* Header */
@@ -45,7 +45,6 @@ header {
     z-index: 1000;
     background-color: var(--green-light);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    font-family: "Inter";
 }
 
 .header-logo-image {
@@ -55,390 +54,390 @@ header {
 }
 
 header i.fa-bars {
-  display: none;
-  color: var(--white-basic);
-  font-size: 2rem;
-  cursor: pointer;
+    display: none;
+    color: var(--white-basic);
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 4vh;
-  padding: 3vh 2vh;
-  color: var(--white-basic);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--white-basic);
 }
 
 nav a {
-  height: min-content;
-  cursor: pointer;
-  align-content: center;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: var(--gray-basic);
-  border-radius: var(--radius-sm);
-  transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 0.3rem;
+    text-decoration: none;
+    color: var(--gray-basic);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
 }
 
 nav a:hover {
-  background-color: var(--white-basic);
-  color: var(--green-dark);
-  font-weight: bold;
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    font-weight: bold;
 }
 
 /* Container do dropdown */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
+
 /* Botão do dropdown */
 .dropbtn {
-  background: none;
-  border: none;
-  color: var(--gray-basic);
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  z-index: 1000;
-  align-items: center;
-  border-radius: var(--radius-sm);
-  transition: all 0.2s ease-in-out;
+    background: none;
+    border: none;
+    color: var(--gray-basic);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1000;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
 }
 
 .dropbtn:hover {
-  background-color: var(--white-basic);
-  color: var(--green-dark);
-  font-weight: bold;
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
 }
 
 .dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--white-basic);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: var(--radius-sm);
-  flex-direction: column;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
-  display: flex;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-basic);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    display: flex;
 }
 
 .dropdown-content a {
-  color: var(--green-dark);
-  padding: 12px 16px;
-  text-decoration: none;
-  border-radius: 0;
-  display: block;
+    color: var(--green-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--green-light);
-  color: var(--white-basic);
+    background-color: var(--green-dark);
+    color: var(--white-basic);
 }
 
 .dropdown.show .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
 }
 
 .landing-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--white-basic);
-  width: 90%;
-  gap: var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-basic);
+    width: 90%;
+    gap: var(--spacing-unit);
 }
 
 .landing-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .landing-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .landing-section i {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .landing-section button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 16rem;
-  height: 4rem;
-  border: none;
-  border-radius: var(--radius-lg);
-  color: var(--green-light);
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 16rem;
+    height: 4rem;
+    border: none;
+    border-radius: var(--radius-lg);
+    color: var(--green-light);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .landing-section button:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .landing-section img {
-  width: 100%;
-  max-width: 60rem;
+    width: 100%;
+    max-width: 60rem;
 }
 
 .white-background {
-  background-color: var(--white-basic);
-  width: 95%;
-  border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6rem;
-  padding: 5rem 0;
+    background-color: var(--white-basic);
+    width: 95%;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    padding: 5rem 0;
 }
 
 .stats-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
 }
 
 .stats-section div {
-  border: 1px solid var(--green-dark);
-  border-radius: var(--radius-md);
-  width: 16rem;
-  height: 8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--green-dark);
+    border: 1px solid var(--green-dark);
+    border-radius: var(--radius-md);
+    width: 16rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--green-dark);
 }
 
 .stats-section div i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .about-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 90%;
-  color: var(--green-dark);
-  background-color: var(--gray-basic);
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--green-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    color: var(--green-dark);
+    background-color: var(--gray-basic);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--green-dark);
 }
 
 .about-title {
-  text-align: center;
-  gap: 0.5rem;
+    text-align: center;
+    gap: 0.5rem;
 }
 
 .about-title h3 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .about-content {
-  display: flex;
-  gap: 2rem;
-  font-size: 1.2rem;
-  align-items: center;
-  text-align: start;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: start;
 }
 
 .about-content img {
-  width: 100%;
-  max-width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .about-images {
-  display: grid;
-  grid-template-columns: 200px 200px;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 1rem;
 }
 
 .services-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 .services-title {
-  color: var(--green-dark);
-  text-align: center;
+    color: var(--green-dark);
+    text-align: center;
 }
 
 .services-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .service-card {
-  width: 100%;
-  max-width: 300px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(0, 0, 0, 0.51);
-  box-shadow: 0 5px 4px 1px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.51);
+    box-shadow: 0 5px 4px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .service-card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .service-card img {
-  width: 100%;
+    width: 100%;
 }
 
 .service-card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  color: var(--green-dark);
-  border-top: 1px solid rgba(0, 0, 0, 0.282);
-  padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: var(--green-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.282);
+    padding: 1.5rem 1rem;
 }
 
 .appointment-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  min-height: 60vh;
-  color: var(--white-basic);
-  padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    min-height: 60vh;
+    color: var(--white-basic);
+    padding: 2rem;
 }
 
 .appointment-title {
-  text-align: center;
+    text-align: center;
 }
 
 .appointment-title h3 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
 .appointment-content {
-  background-color: var(--white-basic);
-  color: var(--green-light);
-  border-radius: var(--radius-lg);
-  display: flex;
-  justify-content: space-between;
-  height: max-content;
+    background-color: var(--white-basic);
+    color: var(--green-light);
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
 }
 
 .appointment-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px 0 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0 40px 40px;
 }
 
 .appointment-info {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .maria-info {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .appointment-section a,
 .landing-section a {
-  background-color: var(--green-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 16rem;
-  height: 4rem;
-  border: none;
-  border-radius: var(--radius-lg);
-  color: var(--gray-basic);
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.474);
+    background-color: var(--green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 16rem;
+    height: 4rem;
+    border: none;
+    border-radius: var(--radius-lg);
+    color: var(--gray-basic);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.474);
 }
 
 .appointment-section a:hover,
 .landing-section a:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .appointment-section a i {
-  font-size: 2rem;
-  margin-right: 10px;
+    font-size: 2rem;
+    margin-right: 10px;
 }
 
 .map {
-  border-top-right-radius: var(--radius-lg);
-  border-bottom-right-radius: var(--radius-lg);
-  overflow: hidden;
+    border-top-right-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+    overflow: hidden;
 }
 
 footer {
-  background-color: var(--white-basic);
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: start;
-  padding: 3rem 1rem;
+    background-color: var(--white-basic);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding: 3rem 1rem;
 }
 
 footer img {
-  align-self: center;
-  max-width: 400px;
+    align-self: center;
+    max-width: 400px;
 }
 
 .services-footer,
 .fast-links-footer,
 .contact-footer {
-  display: flex;
-  flex-direction: column;
-  color: var(--green-light);
-  gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 1.2rem;
 }
 
 .services-footer a,
 .fast-links-footer a {
-  text-decoration: none;
-  color: var(--green-light);
+    text-decoration: none;
+    color: var(--green-light);
 }
 
 .contact-footer i {
-  width: 1.2rem;
-  margin-right: 0.5rem;
+    width: 1.2rem;
+    margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {

@@ -76,68 +76,69 @@ nav a:hover {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
+
 /* Botão do dropdown */
 .dropbtn {
-  background: none;
-  border: none;
-  color: var(--gray-basic);
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  z-index: 1000;
-  align-items: center;
-  border-radius: var(--radius-sm);
-  transition: all 0.2s ease-in-out;
+    background: none;
+    border: none;
+    color: var(--gray-basic);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1000;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
 }
 
 .dropbtn:hover {
-  background-color: var(--white-basic);
-  color: var(--green-dark);
-  font-weight: bold;
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
 }
 
 .dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--white-basic);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: var(--radius-sm);
-  flex-direction: column;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
-  display: flex;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-basic);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    display: flex;
 }
 
 .dropdown-content a {
-  color: var(--green-dark);
-  padding: 12px 16px;
-  text-decoration: none;
-  border-radius: 0;
-  display: block;
+    color: var(--green-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--green-light);
-  color: var(--white-basic);
+    background-color: var(--green-dark);
+    color: var(--white-basic);
 }
 
 .dropdown.show .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
 }
 
 /* Conteúdo principal da página */
