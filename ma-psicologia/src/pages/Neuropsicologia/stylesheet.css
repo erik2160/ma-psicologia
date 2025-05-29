@@ -126,6 +126,7 @@ nav a {
 .dropdown-content a:hover {
     background-color: var(--green-dark);
     color: var(--white-basic);
+    border-radius: 6px;
 }
 
 .dropdown.show .dropdown-content {
