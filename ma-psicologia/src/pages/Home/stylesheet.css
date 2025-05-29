@@ -26,6 +26,10 @@ body {
     font-size: var(--font-size-base);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     display: flex;
     flex-direction: column;
