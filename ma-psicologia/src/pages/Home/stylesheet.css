@@ -17,8 +17,8 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Inter", sans-serif;
     box-sizing: border-box;
+    font-family: "Inter";
 }
 
 body {
@@ -33,15 +33,26 @@ main {
     height: min-content;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--green-light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    font-family: "Inter";
+    /* ADICIONE ESTA LINHA */
+}
+
+.header-logo-image {
+    width: 7.5rem;
+    height: auto;
+    cursor: pointer;
 }
 
 header i.fa-bars {
@@ -51,37 +62,25 @@ header i.fa-bars {
     cursor: pointer;
 }
 
-.header-logo-image {
-    width: 7.5rem;
-    height: auto;
-    cursor: pointer;
-}
-
+/* Menu */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 4vh;
-    padding: 3vh 2vh;
+    gap: 2rem;
+    padding: 2rem;
     color: var(--white-basic);
 }
 
 nav a {
-    height: min-content;
     cursor: pointer;
-    align-content: center;
     padding: 0.3rem;
     text-decoration: none;
     color: var(--gray-basic);
     border-radius: var(--radius-sm);
     transition: all 0.2s ease-in-out;
-}
-
-nav a:hover {
-    background-color: var(--white-basic);
-    color: var(--green-dark);
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .landing-section {
@@ -102,6 +101,7 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
 }
+
 .landing-section i {
     font-size: 2rem;
 }
@@ -262,6 +262,7 @@ nav a:hover {
     color: var(--white-basic);
     padding: 2rem;
 }
+
 .appointment-title {
     text-align: center;
 }
@@ -279,16 +280,19 @@ nav a:hover {
     justify-content: space-between;
     height: max-content;
 }
+
 .appointment-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 0 40px 40px;
 }
+
 .appointment-info {
     display: flex;
     justify-content: space-between;
 }
+
 .maria-info {
     margin-right: 20px;
 }
@@ -389,7 +393,8 @@ footer img {
     }
 
     nav.active {
-        max-height: 500px; /* valor alto suficiente para o conteúdo */
+        max-height: 500px;
+        /* valor alto suficiente para o conteúdo */
         opacity: 1;
         box-shadow: 0px 70px 50px 20px rgba(0, 0, 0, 0.315);
         pointer-events: all;
@@ -404,9 +409,11 @@ footer img {
         text-align: center;
         flex-wrap: wrap;
     }
+
     .landing-section img {
         display: none;
     }
+
     .about-content {
         flex-direction: column;
     }
@@ -417,5 +424,13 @@ footer img {
 
     footer img {
         width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    nav a:hover {
+        background-color: var(--white-basic);
+        color: var(--green-dark);
+        text-shadow: 0 0 1px var(--green-dark);
     }
 }
