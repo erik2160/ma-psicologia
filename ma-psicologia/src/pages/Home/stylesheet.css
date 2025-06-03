@@ -195,6 +195,7 @@ nav a:hover {
     color: var(--white-basic);
     width: 90%;
     gap: var(--spacing-unit);
+    margin: 20px;
 }
 
 .landing-section h1 {
@@ -296,7 +297,11 @@ nav a:hover {
 }
 
 .services-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     color: var(--green-dark);
+    font-size: calc(var(--font-size-base) * 1.5);
     text-align: center;
 }
 
@@ -308,9 +313,11 @@ nav a:hover {
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 300px;
-    max-height: 400px;
+    height: 370px;
     border-radius: var(--radius-md);
     border: 1px solid rgba(0, 0, 0, 0.51);
     box-shadow: 0 5px 4px 1px rgba(0, 0, 0, 0.25);
@@ -331,10 +338,84 @@ nav a:hover {
 .service-card-text {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    justify-content: space-between;
     color: var(--green-dark);
     border-top: 1px solid rgba(0, 0, 0, 0.282);
-    padding: 1.5rem 1rem;
+    flex: 1;
+    padding: 1rem;
+}
+
+.depoimentos-carrossel {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.depoimentos-title {
+    color: var(--green-dark);
+    font-size: calc(var(--font-size-base) * 2);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.carrossel-wrapper {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding-left: 10%;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    gap: 20px;
+}
+
+.depoimento {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+.depoimento img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.depoimento-info {
+    margin-bottom: 20px;
+}
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--green-dark);
+    border: 1px solid var(--green-dark);
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 15%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.seta.esquerda {
+    left: 10px;
+}
+.seta.direita {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .depoimento {
+        flex: 0 0 100%;
+    }
 }
 
 .appointment-section {
@@ -350,6 +431,7 @@ nav a:hover {
 
 .appointment-title {
     text-align: center;
+    font-size: calc(var(--font-size-base) * 1.5);
 }
 
 .appointment-title h3 {
@@ -391,6 +473,24 @@ nav a:hover {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 1.2rem;
+}
+
+.contact-info i {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .appointment-section a,
@@ -517,9 +617,13 @@ footer img {
         gap: 10rem;
     }
 
-    .landing-section {
+    .landing-section div {
         margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -527,29 +631,64 @@ footer img {
         display: none;
     }
 
-    .about-content {
+    .carousel-section {
         flex-direction: column;
+        gap: 30px;
     }
 
-    .about-images {
-        grid-template-columns: 100%;
-    }
-
-    footer img {
+    .carousel {
         width: 100%;
+        object-fit: cover;
     }
 
-    .map {
+    .carousel-text {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .carrossel-wrapper {
+        width: 90vw;
+        overflow: scroll;
+        margin: 0;
+        padding: 0;
+        border: 2px solid var(--green-light);
+        border-radius: 20px;
+    }
+    .carrossel {
+        flex-direction: column;
+        height: 300px;
+    }
+    .depoimentos-carrossel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .seta {
         display: none;
+    }
+    .depoimento {
+        flex: 1;
     }
 
     .appointment-content {
+        width: 100%;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        text-align: center;
         padding: 1.5rem;
+        gap: 30px;
     }
-
     .appointment-text {
+        align-items: center;
+        width: 100%;
+    }
+    .contact-info p {
+        display: block;
+    }
+    footer img {
         width: 100%;
     }
 }
