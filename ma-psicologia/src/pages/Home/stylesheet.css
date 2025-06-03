@@ -133,7 +133,8 @@ nav a:hover {
     border-radius: var(--radius-sm);
     flex-direction: column;
     transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    transition: opacity 0.3s ease, transform 0.3s ease,
+        visibility 0s linear 0.3s;
     display: flex;
 }
 
@@ -246,69 +247,46 @@ nav a:hover {
     gap: 6rem;
     padding: 5rem 0;
 }
-
-.stats-section {
+.carousel-section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    justify-content: center;
+    align-items: start;
+    width: 80%;
+}
+.carousel-text {
+    width: 50%;
+    padding-right: 50px;
 }
 
-.stats-section div {
-    border: 1px solid var(--green-dark);
-    border-radius: var(--radius-md);
-    width: 16rem;
-    height: 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.carousel-title {
     color: var(--green-dark);
+    font-weight: bold;
+    font-size: calc(var(--font-size-base) * 2);
+    margin-bottom: 50px;
+}
+.carousel-info {
+    color: var(--green-light);
+    font-size: calc(var(--font-size-base) * 1.5);
+    line-height: calc(var(--font-size-base) * 2.5);
+}
+.carousel {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    position: relative;
 }
 
-.stats-section div i {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.about-section {
+.carousel-images {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 90%;
-    color: var(--green-dark);
-    background-color: var(--gray-basic);
-    padding: 3rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--green-dark);
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
-.about-title {
-    text-align: center;
-    gap: 0.5rem;
-}
-
-.about-title h3 {
-    font-size: 2rem;
-}
-
-.about-content {
-    display: flex;
-    gap: 2rem;
-    font-size: 1.2rem;
-    align-items: center;
-    text-align: start;
-}
-
-.about-content img {
-    width: 100%;
-    max-width: 500px;
-}
-
-.about-images {
-    display: grid;
-    grid-template-columns: 200px 200px;
-    gap: 1rem;
+.carousel-images img {
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .services-section {
@@ -385,9 +363,8 @@ nav a:hover {
     border-radius: var(--radius-lg);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
+    width: 80%;
     max-width: 1100px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -396,7 +373,7 @@ nav a:hover {
 .appointment-text {
     flex: 1;
     min-width: 280px;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -450,8 +427,6 @@ nav a:hover {
 
 .map {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
@@ -504,7 +479,6 @@ footer img {
     gap: 0.5rem;
     margin-bottom: 0.5rem;
 }
-
 
 @media (max-width: 768px) {
     header {
