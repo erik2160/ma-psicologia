@@ -20,10 +20,22 @@ window.addEventListener("click", function (e) {
     }
 });
 
+window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    header.classList.toggle("scrolled", window.scrollY > 0);
+});
+
 function redirectToPsicoterapiaPage() {
     window.location.href = "../Psicoterapia/index.html";
 }
 
 function redirectToNeuropsicologiaPage() {
     window.location.href = "../Neuropsicologia/index.html";
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth", // ou 'auto' para instantâneo
+    });
 }
