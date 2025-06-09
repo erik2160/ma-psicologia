@@ -91,6 +91,12 @@ nav a:hover {
     color: var(--green-dark);
     text-shadow: 0 0 1px var(--green-dark);
 }
+.nav-option-active {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+    cursor: default;
+}
 
 /* Container do dropdown */
 .dropdown {
@@ -163,7 +169,7 @@ nav a:hover {
 
 .whatsapp-float {
     position: fixed;
-    top: 200px;
+    bottom: 100px;
     right: 20px;
     width: 60px;
     height: 60px;
@@ -347,13 +353,13 @@ nav a:hover {
     padding: 1rem;
 }
 
-.depoimentos-carrossel {
+.duvidas {
     padding: 40px 20px;
     width: 100%;
     text-align: center;
 }
 
-.depoimentos-title {
+.duvidas-title {
     color: var(--green-dark);
     font-size: calc(var(--font-size-base) * 2);
     font-weight: bold;
@@ -422,10 +428,50 @@ nav a:hover {
     right: 10px;
 }
 
-@media (max-width: 768px) {
-    .depoimento {
-        flex: 0 0 100%;
-    }
+.faq {
+    max-width: 700px;
+    margin: auto;
+}
+
+.container {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.25);
+    margin: 20px 0;
+}
+
+.question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question::after {
+    content: "\002B";
+    font-size: 2.2rem;
+    position: absolute;
+    right: 20px;
+    transition: 0.2s;
+}
+
+.question.active::after {
+    transform: rotate(45deg);
+}
+
+.answercont {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.answer {
+    padding: 0 20px 20px;
+    line-height: 1.5rem;
 }
 
 .appointment-section {
@@ -437,6 +483,7 @@ nav a:hover {
     min-height: 60vh;
     color: var(--white-basic);
     padding: 2rem;
+    margin: 10vh 0;
 }
 
 .appointment-title {
@@ -523,6 +570,7 @@ nav a:hover {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.474);
+    text-decoration: none;
 }
 
 .appointment-section a:hover,
@@ -537,6 +585,7 @@ nav a:hover {
 
 .map {
     flex: 1;
+    width: 100%;
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
@@ -590,13 +639,45 @@ footer img {
     margin-bottom: 0.5rem;
 }
 
+@media (max-width: 1024px) {
+    .landing-section h1 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .landing-section h2 {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .landing-section i {
+        font-size: 1rem;
+    }
+
+    .landing-section a {
+        height: min-content;
+        padding: 15px;
+    }
+
+    .carousel-section {
+        width: 90%;
+    }
+    .carousel-info {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .appointment-content {
+        width: 90%;
+    }
+}
 @media (max-width: 768px) {
-    header {
+    #header {
         padding: 0 30px;
         justify-content: space-between;
     }
 
-    header i.fa-bars {
+    #header i.fa-bars {
         display: block;
     }
 
@@ -621,6 +702,7 @@ footer img {
         opacity: 1;
         box-shadow: 0px 70px 50px 20px rgba(0, 0, 0, 0.315);
         pointer-events: all;
+        overflow: visible;
     }
 
     main {
@@ -655,31 +737,6 @@ footer img {
         width: 100%;
         padding: 0;
         text-align: center;
-    }
-
-    .carrossel-wrapper {
-        width: 90vw;
-        overflow: scroll;
-        margin: 0;
-        padding: 0;
-        border: 2px solid var(--green-light);
-        border-radius: 20px;
-    }
-    .carrossel {
-        flex-direction: column;
-        height: 300px;
-    }
-    .depoimentos-carrossel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .seta {
-        display: none;
-    }
-    .depoimento {
-        flex: 1;
     }
 
     .appointment-content {
