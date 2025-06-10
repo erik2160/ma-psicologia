@@ -21,6 +21,10 @@
     font-family: "Inter";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header */
 header {
     display: flex;

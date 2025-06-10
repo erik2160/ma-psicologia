@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <a href="#contato-section-id">Contato</a>
+                <a href="#invisible-appointment-title">Contato</a>
             </nav>
 
             <i class="fa-solid fa-bars" id="menu-icon"></i>
@@ -70,7 +70,6 @@
                     </a>
                 </div>
 
-                <!-- Mudar corte da imagem no canva pro, tem muito espaço extra -->
                 <img
                     src="../../assets/icons/logo-white-with-text.svg"
                     alt="Ma Psicologia logo"
@@ -238,6 +237,7 @@
                             </div>
                         </div>
                     </div>
+                    <div id="invisible-appointment-title"></div>
                 </section>
             </div>
             <section class="appointment-section" id="contato-section-id">
@@ -309,25 +309,36 @@
                 <p><strong>Links Rápidos</strong></p>
                 <a href="../Home/index.html">Página Inicial</a>
                 <a href="../QuemSomos/index.html">Quem somos</a>
-                <a href="#appointment-content-id">Contato</a>
+                <a href="#invisible-appointment-title">Contato</a>
             </div>
             <div class="contact-footer">
                 <p><strong>Contato</strong></p>
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>Rua Francisco
-                    Rodrigues Seckler, 599
-                    <br />
-                    08230-020
-                </p>
+                <a
+                    href="https://www.google.com/maps?ll=-23.526862,-46.4555&z=13&t=m&hl=pt-BR&gl=BR&mapclient=embed&q=R.+Francisco+Rodrigues+Seckler,+599+-+Vila+Taquari+S%C3%A3o+Paulo+-+SP+08230-020"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit"
+                >
+                        <i class="fa-solid fa-location-dot"></i>Rua Francisco
+                        Rodrigues Seckler, 599
+                        <br />
+                        08230-020
+                </a>
+
                 <!-- <p>
                     <i class="fa-solid fa-envelope"></i>mapsicologia@gmail.com
                 </p> -->
-                <p><i class="fa-solid fa-phone"></i>(81) 9.8967-6527</p>
+                <a
+                    href="https://wa.me/5581982918524"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit"
+                >
+                    <i class="fa-solid fa-phone"></i>(81) 9.8967-6527
+                </a>
             </div>
         </footer>
-        <script src="nav.js"></script>
-        <script src="carousel.js"></script>
-        <script src="float-button.js"></script>
-        <script src="faq.js"></script>
+        <script src="nav.js" defer></script>
+        <script src="carousel.js" defer></script>
+        <script src="float-button.js" defer></script>
+        <script src="faq.js" defer></script>
     </body>
 </html>
