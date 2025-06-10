@@ -226,6 +226,17 @@ nav a {
     padding-left: 0;
 }
 
+.inline-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 .custom-list li {
     background: #f9f9f9;
     padding: 0.8rem 1rem 0.8rem 2rem;
