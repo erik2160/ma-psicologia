@@ -807,10 +807,6 @@ footer img {
         width: auto;
         font-size: 20px;
     }
-
-    p {
-        font-size: 20px;
-    }
 }
 
 @media (hover: hover) {
