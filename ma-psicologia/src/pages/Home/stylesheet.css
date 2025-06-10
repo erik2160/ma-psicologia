@@ -276,6 +276,8 @@ nav a:hover {
     color: var(--green-light);
     font-size: calc(var(--font-size-base) * 1.5);
     line-height: calc(var(--font-size-base) * 2.5);
+    text-align: justify;
+    width: 85%;
 }
 .carousel {
     width: 600px;
@@ -772,3 +774,4 @@ footer img {
         text-shadow: 0 0 1px var(--green-dark);
     }
 }
+
