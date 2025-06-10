@@ -429,7 +429,7 @@ nav a:hover {
 }
 
 .faq {
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -449,6 +449,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: var(--green-dark);
 }
 
 .question::after {
@@ -467,6 +468,7 @@ nav a:hover {
     max-height: 0;
     overflow: hidden;
     transition: 0.3s;
+    color: var(--green-light);
 }
 
 .answer {
@@ -483,7 +485,6 @@ nav a:hover {
     min-height: 60vh;
     color: var(--white-basic);
     padding: 2rem;
-    margin: 10vh 0;
 }
 
 .appointment-title {
@@ -706,7 +707,7 @@ footer img {
     }
 
     main {
-        gap: 10rem;
+        gap: 5rem;
     }
 
     .landing-section div {
@@ -741,7 +742,6 @@ footer img {
 
     .appointment-content {
         width: 100%;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -760,6 +760,11 @@ footer img {
     }
 }
 
+@media (max-width: 425px) {
+    .appointment-content {
+        flex-direction: column;
+    }
+}
 @media (hover: hover) {
     nav a:hover {
         background-color: var(--white-basic);
