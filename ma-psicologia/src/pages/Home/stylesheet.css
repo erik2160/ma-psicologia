@@ -577,7 +577,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-
 .appointment-section a,
 .landing-section a {
     background-color: var(--green-dark);
@@ -874,7 +873,6 @@ footer img {
     .contact-info {
         gap: 3px;
         width: 220px;
-        background-color: black;
         padding: 0 10px;
         align-items: center;
         justify-content: center;
@@ -908,7 +906,6 @@ footer img {
     }
 }
 
-
 @media (hover: hover) {
     nav a:hover {
         background-color: var(--white-basic);
@@ -916,4 +913,3 @@ footer img {
         text-shadow: 0 0 1px var(--green-dark);
     }
 }
-
