@@ -732,7 +732,6 @@ footer img {
 
     nav.active {
         max-height: 500px;
-        /* valor alto suficiente para o conteúdo */
         opacity: 1;
         box-shadow: 0px 70px 50px 20px rgba(0, 0, 0, 0.315);
         pointer-events: all;
