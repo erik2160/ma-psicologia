@@ -1,20 +1,25 @@
 const carouselImages = document.querySelector(".carousel-images");
 const images = document.querySelectorAll(".carousel-images img");
-const imageWidth = 600;
+
 let index = 0;
 let intervalId;
 
+// Clona a primeira imagem e adiciona no final para efeito de loop suave
+const firstClone = images[0].cloneNode(true);
+carouselImages.appendChild(firstClone);
+
 function moveToNextImage() {
     index++;
-    carouselImages.style.transition = "transform 1s ease-in-out";
-    carouselImages.style.transform = `translateX(${-imageWidth * index}px)`;
+    carouselImages.style.transform = `translateX(${-index * 100}%)`;
+    carouselImages.style.transition = "transform 0.8s ease-in-out";
 
-    if (index === images.length - 1) {
+    // Quando chega na última (clone), volta para a primeira
+    if (index === images.length) {
         setTimeout(() => {
             carouselImages.style.transition = "none";
             index = 0;
-            carouselImages.style.transform = `translateX(0px)`;
-        }, 1000);
+            carouselImages.style.transform = `translateX(0)`;
+        }, 800);
     }
 }
 

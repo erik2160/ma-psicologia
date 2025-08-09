@@ -259,22 +259,26 @@ nav a:hover {
     padding: 5rem 0;
 }
 
+/* CARROSSEL */
+/* Estrutura */
 .carousel-section {
     display: flex;
     align-items: start;
     width: 80%;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .carousel-text {
-    width: 50%;
-    padding-right: 50px;
+    flex: 1 1 300px;
+    padding-right: 20px;
 }
 
 .carousel-title {
     color: var(--green-dark);
     font-weight: bold;
     font-size: calc(var(--font-size-base) * 2);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .carousel-info {
@@ -282,12 +286,14 @@ nav a:hover {
     font-size: calc(var(--font-size-base) * 1.5);
     line-height: calc(var(--font-size-base) * 2.5);
     text-align: justify;
-    width: 85%;
+    width: 100%;
 }
 
+/* Carrossel */
 .carousel {
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    max-width: 600px; /* ou o valor máximo que quiser */
+    aspect-ratio: 3 / 2; /* mantém proporção */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
@@ -301,10 +307,12 @@ nav a:hover {
 }
 
 .carousel-images img {
-    width: 600px;
+    flex: 0 0 100%; /* cada imagem ocupa 100% da largura do carrossel */
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* preenche todo o espaço */
 }
+
+/* FIM CARROSSEL */
 
 .services-section {
     display: flex;
