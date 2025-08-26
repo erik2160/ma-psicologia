@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Variáveis Globais */
+:root {
+    --green-light: #69807a;
+    --green-dark: #476c5e;
+    --white-basic: #ffffff;
+    --gray-basic: #f0f2f1;
+    --font-size-base: 1rem;
+    --spacing-unit: 1rem;
+    --radius-lg: 3rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.5rem;
+}
+
+/* Configurações globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--green-light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-logo-image {
+    width: 7.5rem;
+    height: auto;
+    cursor: pointer;
+}
+
+header i.fa-bars {
+    display: none;
+    color: var(--white-basic);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--white-basic);
+}
+
+nav a {
+    cursor: pointer;
+    padding: 0.3rem;
+    text-decoration: none;
+    color: var(--gray-basic);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botão do dropdown */
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--gray-basic);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1000;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+}
+
+.dropbtn:hover {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-basic);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease,
+        visibility 0s linear 0.3s;
+    display: flex;
+}
+
+.dropdown-content a {
+    color: var(--green-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a.active {
+    background-color: var(--green-dark);
+    color: var(--white-basic);
+    border-radius: 6px;
+}
+
+.dropdown.show .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    color: var(--gray-basic);
+    font-size: calc(var(--font-size-base) * 2);
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-float.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Conteúdo Principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 30vh;
+    background-color: var(--white-basic);
+    color: pink;
+}
+
+/* Seção com duas colunas */
+.content-two-columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Coluna de texto principal */
+.text-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.text-column h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--green-dark);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.text-column h2 {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--green-light);
+    font-weight: 700;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: var(--green-light);
+    padding-left: 1rem;
+    line-height: 1.3;
+    transition: border-left-width 0.3s ease;
+}
+
+.text-column h2:hover {
+    border-left: 10px solid var(--green-light);
+}
+
+.text-column p,
+.psicoterapia-content-text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    max-width: 800px;
+}
+
+/* Div de imagem */
+.image-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* div lista personalizada */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.inline-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.custom-list li {
+    background: #f9f9f9;
+    padding: 0.8rem 1rem 0.8rem 2rem;
+    margin-bottom: 0.8rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    position: relative;
+    line-height: 1.6;
+}
+
+.custom-list li::before {
+    content: "✔";
+    font-size: 1rem;
+    color: var(--green-light);
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-list ul {
+    margin: 0.5rem 0;
+    padding-left: 1.4rem;
+}
+
+.custom-list ul li::before {
+    content: "–";
+    color: #666;
+}
+
+/* divisor visual */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    margin: 3rem 0;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    opacity: 0.6;
+}
+
+/* footer */
+footer {
+    background-color: var(--white-basic);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding: 3rem 1rem;
+}
+
+footer img {
+    align-self: center;
+    max-width: 400px;
+}
+
+.services-footer,
+.fast-links-footer,
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 1.2rem;
+}
+
+.services-footer a,
+.fast-links-footer a {
+    text-decoration: none;
+    color: var(--green-light);
+}
+
+.contact-footer i {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+
+    header i.fa-bars {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--green-light);
+        gap: 10px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.2s ease;
+        pointer-events: none;
+    }
+
+    nav.active {
+        max-height: 500px;
+        opacity: 1;
+        box-shadow: 0px 70px 50px 20px rgba(0, 0, 0, 0.315);
+        pointer-events: all;
+        overflow: visible;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-column h1 {
+        font-size: 2rem;
+    }
+
+    .text-column h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .custom-list li {
+        font-size: 1rem;
+    }
+
+    .content-two-columns {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    footer img {
+        width: 100%;
+    }
+
+    .psicoterapia-content-text p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-column h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-column h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (hover: hover) {
+    nav a:hover {
+        background-color: var(--white-basic);
+        color: var(--green-dark);
+        text-shadow: 0 0 1px var(--green-dark);
+    }
+}

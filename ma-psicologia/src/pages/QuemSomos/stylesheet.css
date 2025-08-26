@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Variáveis globais */
+:root {
+    --green-light: #69807a;
+    --green-dark: #476c5e;
+    --white-basic: #ffffff;
+    --gray-basic: #f0f2f1;
+    --font-size-base: 1rem;
+    --spacing-unit: 1rem;
+    --radius-lg: 3rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.5rem;
+}
+
+/* Configurações globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--green-light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-logo-image {
+    width: 7.5rem;
+    height: auto;
+    cursor: pointer;
+}
+
+header i.fa-bars {
+    display: none;
+    color: var(--white-basic);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Menu do header */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--white-basic);
+}
+
+nav a {
+    cursor: pointer;
+    padding: 0.3rem;
+    text-decoration: none;
+    color: var(--gray-basic);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+}
+.nav-option-active {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+    cursor: default;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botão do dropdown */
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--gray-basic);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1000;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease-in-out;
+}
+
+.dropbtn:hover {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-basic);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease,
+        visibility 0s linear 0.3s;
+    display: flex;
+}
+
+.dropdown-content a {
+    color: var(--green-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--green-dark);
+    color: var(--white-basic);
+    border-radius: 6px;
+}
+
+.dropdown.show .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    color: var(--gray-basic);
+    font-size: calc(var(--font-size-base) * 2);
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-float.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Seção Sobre e Missão/Visão - estilo moderno inspirado na imagem */
+.about-section,
+.mission-vision-section,
+.valores-section {
+    padding: 1rem 1rem;
+    background-color: var(--white-basic);
+}
+
+.about-container,
+.mv-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text,
+.mv-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p,
+.mv-text p {
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.about-image,
+.mv-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img,
+.mv-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Para inverter a ordem na segunda parte (Visão) */
+.mv-reverse {
+    flex-direction: row-reverse;
+}
+
+.section-title {
+    color: var(--green-dark);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Seção Missão e Visão lado a lado */
+.mission-vision-inline {
+    background-color: var(--white-basic);
+    padding: 4rem 1rem;
+}
+
+.mission-vision-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.mv-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.mv-column h2 {
+    margin-bottom: 1rem;
+    color: var(--green-dark);
+    font-size: 1.8rem;
+}
+
+.mv-column p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--green-dark);
+    font-weight: 700;
+    border-left: 5px solid var(--green-light);
+    padding-left: 1rem;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--green-light);
+    font-weight: 700;
+    border-left: 5px solid var(--green-light);
+    padding-left: 1rem;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+}
+
+h1:hover,
+h2:hover {
+    border-left: 10px solid var(--green-light);
+}
+
+.valores-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title.centered {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--green-dark);
+    font-size: 2rem;
+}
+
+.valores-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.valor-card {
+    flex: 1 1 200px;
+    background-color: #f9f9f9;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: scale(1.03);
+}
+
+.valor-card h3 {
+    color: var(--green-dark);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.valor-card p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Div divisor custom */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    margin: 3rem 0;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--white-basic);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding: 3rem 1rem;
+}
+
+footer img {
+    align-self: center;
+    max-width: 400px;
+}
+
+.services-footer,
+.fast-links-footer,
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-light);
+    gap: 1.2rem;
+}
+
+.services-footer a,
+.fast-links-footer a {
+    text-decoration: none;
+    color: var(--green-light);
+}
+
+.contact-footer i {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+
+    header i.fa-bars {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--green-light);
+        gap: 10px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.2s ease;
+        pointer-events: none;
+    }
+
+    nav.active {
+        max-height: 500px;
+        opacity: 1;
+        box-shadow: 0px 70px 50px 20px rgba(0, 0, 0, 0.315);
+        pointer-events: all;
+        overflow: visible;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer img {
+        width: 100%;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mv-column {
+        padding: 0 1rem;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .about-container,
+    .mv-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img,
+    .mv-image img {
+        max-width: 90%;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .valores-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .valor-card {
+        width: 90%;
+        flex: 0;
+    }
+}

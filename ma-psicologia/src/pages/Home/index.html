@@ -6,45 +6,70 @@
         <title>MA Psicologia</title>
         <link rel="icon" href="../../assets/icons/logo-only-white.svg" />
         <link rel="stylesheet" href="stylesheet.css" />
-        <script
-            src="https://kit.fontawesome.com/d3e796e18d.js"
-            crossorigin="anonymous"
-        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
     </head>
     <body>
-        <header>
-            <img
-                class="header-logo-image"
-                src="../../assets/icons/logo-without-text.svg"
-            />
+        <header id="header">
+            <a href="../Home/index.html">
+                <img
+                    class="header-logo-image"
+                    src="../../assets/icons/logo-without-text.svg"
+                    alt="Imagem do header"
+                />
+            </a>
             <nav id="menu">
-                <a href="#">Página Inicial</a>
-                <a href="#">Quem Somos</a>
-                <a href="#">Especialidades</a>
-                <a href="#">Sublocação</a>
-                <a href="#">Contato</a>
+                <a onclick="scrollToTop()" class="nav-option-active">Início</a>
+
+                <a href="../QuemSomos/index.html">Quem Somos</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Especialidades<i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../Psicoterapia/index.html">Psicoterapia</a>
+                        <a href="../Neuropsicologia/index.html"
+                            >Neuropsicologia</a
+                        >
+                    </div>
+                </div>
+
+                <a href="#invisible-appointment-title">Contato</a>
             </nav>
+
             <i class="fa-solid fa-bars" id="menu-icon"></i>
         </header>
         <main>
-            <section class="landing-section">
+            <!-- Botão Flutuante -->
+            <a
+                href="https://wa.me/81982918524"
+                class="whatsapp-float"
+                target="_blank"
+                aria-label="Fale no WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <section class="landing-section" id="landing-section-id">
                 <div>
                     <h1>Atendimento psicológico humanizado e de qualidade</h1>
                     <h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Officiis quam eveniet ipsam iste minus alias ea
-                        aspernatur .
+                        Proporcionando acolhimento, orientação e suporte,
+                        respeitando a singularidade de cada indivíduo e
+                        promovendo o desenvolvimento pessoal e o bem-estar
+                        emocional.
                     </h2>
-                    <button type="button">
-                        <i
-                            class="fa-brands fa-square-whatsapp"
-                            style="color: #63e6be"
-                        ></i
-                        >Agendar consulta
-                    </button>
+                    <a
+                        class="agendar-button"
+                        href="https://wa.me/5581982918524"
+                        target="_blank"
+                        ><i class="fa-brands fa-whatsapp"></i>Agendar consulta
+                    </a>
                 </div>
 
-                <!-- Mudar corte da imagem no canva pro, tem muito espaço extra -->
                 <img
                     src="../../assets/icons/logo-white-with-text.svg"
                     alt="Ma Psicologia logo"
@@ -106,57 +131,129 @@
                         </div>
                     </div>
                 </section> -->
-                <section class="services-section">
-                    <div class="services-title">
-                        <h3>Nossos serviços</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                <section class="carousel-section">
+                    <div class="carousel-text">
+                        <p class="carousel-title">
+                            Cuidando da sua saúde emocional
+                        </p>
+                        <p class="carousel-info">
+                            Encontre um espaço acolhedor e seguro, onde você
+                            poderá expressar suas emoções, compartilhar suas
+                            vivências e encontrar suporte para os desafios do
+                            cotidiano. Através de uma escuta atenta e
+                            qualificada, a psicoterapia oferece um ambiente de
+                            confiança e sigilo, favorecendo o autoconhecimento,
+                            o fortalecimento emocional e a construção de
+                            estratégias para lidar com as dificuldades da vida.
+                        </p>
+                    </div>
+
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img
+                                src="../../assets/images/room_1.jpeg"
+                                alt="Imagem 1"
+                            />
+                            <img
+                                src="../../assets/images/room_2.jpeg"
+                                alt="Imagem 2"
+                            />
+                            <img
+                                src="../../assets/images/room_3.jpeg"
+                                alt="Imagem 3"
+                            />
+                            <img
+                                src="../../assets/images/room_4.jpeg"
+                                alt="Imagem 4"
+                            />
+                            <img
+                                src="../../assets/images/room_5.jpeg"
+                                alt="Imagem 5"
+                            />
+                            <img
+                                src="../../assets/images/room_6.jpeg"
+                                alt="Imagem 6"
+                            />
+                            <img
+                                src="../../assets/images/room_7.jpeg"
+                                alt="Imagem 7"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section class="services-section" id="services-section-id">
+                    <div class="services-title" id="services-title-id">
+                        <h2>Nossas Especialidades</h2>
+                        <p class="especialidades-slogan-text">
+                            Auxiliamos no cuidado com a saúde mental por meio de
+                            abordagens especializadas e eficazes.
                         </p>
                     </div>
                     <div class="services-cards">
-                        <div class="service-card">
-                            <img src="../../assets/icons/logo.png" alt="" />
+                        <div
+                            class="service-card"
+                            onclick="redirectToPsicoterapiaPage()"
+                        >
+                            <img
+                                src="../../assets/images/psicoterapia-ilustracao.jpg"
+                                alt=""
+                            />
                             <div class="service-card-text">
                                 <p>
-                                    <strong>Fisioterapia</strong>
+                                    <strong>Psicoterapia</strong>
                                 </p>
                                 <p>
-                                    Lorem impsum dolor sit amet impsum dolor sit
-                                    amet
+                                    Um espaço profissional para o cuidado da
+                                    saúde mental
                                 </p>
                                 <i>Clique para saber mais</i>
                             </div>
                         </div>
-                        <div class="service-card">
-                            <img src="../../assets/icons/logo.png" alt="" />
+                        <div
+                            class="service-card"
+                            onclick="redirectToNeuropsicologiaPage()"
+                        >
+                            <img
+                                src="../../assets/images/neuropsicologia-ilustracao.jpg"
+                                alt=""
+                            />
                             <div class="service-card-text">
                                 <p>
-                                    <strong>Fisioterapia</strong>
+                                    <strong>Neuropsicologia</strong>
                                 </p>
                                 <p>
-                                    Lorem impsum dolor sit amet impsum dolor sit
-                                    amet
-                                </p>
-                                <i>Clique para saber mais</i>
-                            </div>
-                        </div>
-                        <div class="service-card">
-                            <img src="../../assets/icons/logo.png" alt="" />
-                            <div class="service-card-text">
-                                <p>
-                                    <strong>Fisioterapia</strong>
-                                </p>
-                                <p>
-                                    Lorem impsum dolor sit amet impsum dolor sit
-                                    amet
+                                    Avaliação e intervenção especializadas nas
+                                    funções cognitivas e comportamentais
                                 </p>
                                 <i>Clique para saber mais</i>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section class="duvidas">
+                    <p class="duvidas-title">Dúvidas Frequentes</p>
+                    <div class="faq">
+                        <div class="container">
+                            <div class="question">
+                                How do I verify my email?
+                            </div>
+                            <div class="answercont">
+                                <div class="answer">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Perspiciatis quod quaerat
+                                    repellat odio repellendus vel sunt sint
+                                    veritatis ipsa rem reprehenderit, expedita
+                                    minus iusto iure quibusdam ratione unde
+                                    nesciunt possimus!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="invisible-appointment-title"></div>
+                </section>
             </div>
-            <section class="appointment-section">
+            <section class="appointment-section" id="contato-section-id">
                 <div class="appointment-title">
                     <h3>Pronto pra agendar sua consulta?</h3>
                     <p>
@@ -164,7 +261,7 @@
                         agendar uma consulta ou tirar suas dúvidas.
                     </p>
                 </div>
-                <div class="appointment-content">
+                <div class="appointment-content" id="appointment-content-id">
                     <div class="appointment-text">
                         <div class="appointment-info">
                             <p class="maria-info">
@@ -174,7 +271,7 @@
                                     CRP XXXX-X
                                 </strong>
                             </p>
-                            <div class="contact-footer">
+                            <div class="contact-info">
                                 <p><strong>Contato</strong></p>
                                 <p>
                                     <i class="fa-solid fa-location-dot"></i>Rua
@@ -193,13 +290,16 @@
                             </div>
                         </div>
                         <a
+                            class="agendar-button"
+                            href="https://wa.me/5581982918524"
+                            target="_blank"
                             ><i class="fa-brands fa-whatsapp"></i>Agendar
                             consulta</a
                         >
                     </div>
                     <div class="map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21299.19480687434!2d-46.466652949075595!3d-23.532025890406313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66b459f864ad%3A0x61ce10833630b334!2sR.%20Francisco%20Rodrigues%20Seckler%2C%20599%20-%20Vila%20Taquari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008230-020!5e0!3m2!1spt-BR!2sbr!4v1747857637359!5m2!1spt-BR!2sbr"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21299.19480687434!2d-46.466652949075595!3d-23.532025890406313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66b459f864ad%3A0x61ce10833630b334!2sR.%20Francisco%20Rodrigues%20Seckler%2C%20599%20-%20Vila%20Taquari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008230-020!5e0!3m2!1spt-BR!2sbr!4v1747857637359!5m2!1spt-BR!2sbr&zoom=8"
                             width="600"
                             height="450"
                             style="border: 0"
@@ -214,32 +314,44 @@
         <footer>
             <img src="../../assets/icons/logo-horizontal.png" alt="logo" />
             <div class="services-footer">
-                <p><strong>Serviços</strong></p>
-                <a href="#">Fisioterapia</a>
-                <a href="#">Fisioterapia</a>
-                <a href="#">Fisioterapia</a>
-                <a href="#">Fisioterapia</a>
+                <p><strong>Especialidades</strong></p>
+                <a href="../Psicoterapia/index.html">Psicoterapia</a>
+                <a href="../Neuropsicologia/index.html">Neuropsicologia</a>
             </div>
             <div class="fast-links-footer">
                 <p><strong>Links Rápidos</strong></p>
-                <a href="#">Página Inicial</a>
-                <a href="#">Quem somos</a>
-                <a href="#">Sublocação</a>
+                <a href="../Home/index.html">Página Inicial</a>
+                <a href="../QuemSomos/index.html">Quem somos</a>
+                <a href="#invisible-appointment-title">Contato</a>
             </div>
             <div class="contact-footer">
                 <p><strong>Contato</strong></p>
-                <p>
+                <a
+                    href="https://www.google.com/maps?ll=-23.526862,-46.4555&z=13&t=m&hl=pt-BR&gl=BR&mapclient=embed&q=R.+Francisco+Rodrigues+Seckler,+599+-+Vila+Taquari+S%C3%A3o+Paulo+-+SP+08230-020"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit"
+                >
                     <i class="fa-solid fa-location-dot"></i>Rua Francisco
                     Rodrigues Seckler, 599
                     <br />
                     08230-020
-                </p>
-                <p>
+                </a>
+
+                <!-- <p>
                     <i class="fa-solid fa-envelope"></i>mapsicologia@gmail.com
-                </p>
-                <p><i class="fa-solid fa-phone"></i>(81) 9.8967-6527</p>
+                </p> -->
+                <a
+                    href="https://wa.me/5581982918524"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit"
+                >
+                    <i class="fa-solid fa-phone"></i>(81) 9.8967-6527
+                </a>
             </div>
         </footer>
-        <script src="script.js"></script>
+        <script src="nav.js" defer></script>
+        <script src="carousel.js" defer></script>
+        <script src="float-button.js" defer></script>
+        <script src="faq.js" defer></script>
     </body>
 </html>
