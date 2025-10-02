@@ -182,10 +182,10 @@ nav a:hover {
     pointer-events: none;
 }
 
-/* Seção Sobre e Missão/Visão - estilo moderno inspirado na imagem */
 .about-section,
 .mission-vision-section,
 .valores-section {
+    margin-top: 20px;
     padding: 1rem 1rem;
     background-color: var(--white-basic);
 }
@@ -392,7 +392,7 @@ footer img {
     margin-right: 0.5rem;
 }
 
-/* responsividade */
+/* Responsividade */
 @media (max-width: 768px) {
     header {
         padding: 0 30px;
@@ -436,7 +436,6 @@ footer img {
     }
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .mission-vision-container {
         flex-direction: column;
@@ -448,7 +447,6 @@ footer img {
     }
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .about-container,
     .mv-block {
@@ -462,7 +460,6 @@ footer img {
     }
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .valores-grid {
         flex-direction: column;
