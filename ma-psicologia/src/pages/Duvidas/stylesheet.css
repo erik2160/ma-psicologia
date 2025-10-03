@@ -75,6 +75,13 @@ nav a:hover {
     text-shadow: 0 0 1px var(--green-dark);
 }
 
+.nav-option-active {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+    cursor: pointer;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
