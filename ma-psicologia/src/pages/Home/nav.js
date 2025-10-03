@@ -32,13 +32,13 @@ function redirectToNeuropsicologiaPage() {
     window.location.href = "../Neuropsicologia/index.html";
 }
 
+function redirectToDuvidasPage() {
+    window.location.href = "../Duvidas/index.html";
+}
+
 function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: "smooth",
     });
 }
-
-window.onload(() => {
-    alert("opa");
-})

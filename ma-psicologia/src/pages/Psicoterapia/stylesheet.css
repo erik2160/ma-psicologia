@@ -379,7 +379,7 @@ footer img {
         background-color: var(--white-basic);
         color: var(--green-dark);
         text-shadow: 0 0 1px var(--green-dark);
-        cursor: default;
+        cursor: pointer;
     }
 
     .text-column h1 {
