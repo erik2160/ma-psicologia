@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Variáveis globais */
 :root {
@@ -18,7 +18,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter';
+    font-family: "Inter";
 }
 
 /* Header */
@@ -73,6 +73,13 @@ nav a:hover {
     background-color: var(--white-basic);
     color: var(--green-dark);
     text-shadow: 0 0 1px var(--green-dark);
+}
+
+.nav-option-active {
+    background-color: var(--white-basic);
+    color: var(--green-dark);
+    text-shadow: 0 0 1px var(--green-dark);
+    cursor: pointer;
 }
 
 .dropdown {
@@ -184,7 +191,7 @@ nav a:hover {
     min-height: 30vh;
     background-color: #ffffff;
     color: pink;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Seção com duas colunas */
@@ -283,7 +290,7 @@ nav a:hover {
 }
 
 .custom-list li::before {
-    content: '✔';
+    content: "✔";
     font-size: 1rem;
     color: var(--green-light);
     position: absolute;
@@ -335,6 +342,10 @@ footer img {
 .contact-footer i {
     width: 1.2rem;
     margin-right: 0.5rem;
+}
+
+p {
+    text-align: justify;
 }
 
 /* responsividade */

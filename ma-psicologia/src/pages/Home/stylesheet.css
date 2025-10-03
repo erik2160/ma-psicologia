@@ -97,7 +97,7 @@ nav a:hover {
     background-color: var(--white-basic);
     color: var(--green-dark);
     text-shadow: 0 0 1px var(--green-dark);
-    cursor: default;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -375,14 +375,14 @@ nav a:hover {
 }
 
 .service-card-text p {
-    text-align: center;    
+    text-align: center;
     line-height: 1.5rem;
     white-space: normal;
     overflow-wrap: break-word;
 }
 
 .service-card-text i {
-    text-align: left;      
+    text-align: left;
     font-weight: 250;
 }
 
@@ -397,6 +397,33 @@ nav a:hover {
     font-size: calc(var(--font-size-base) * 2);
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+.ver-mais-duvidas {
+    position: relative;
+    color: var(--green-dark);
+    font-size: calc(var(--font-size-base) * 1.2);
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    text-decoration: none;
+}
+
+.ver-mais-duvidas::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--green-dark);
+    transition: width 0.3s ease;
+}
+
+.ver-mais-duvidas:hover::after {
+    width: 100%;
 }
 
 .carrossel-wrapper {
