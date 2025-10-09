@@ -255,6 +255,7 @@ nav a:hover {
     align-items: center;
     gap: 6rem;
     padding: 5rem 0;
+    height: auto;
 }
 
 /* CARROSSEL */
@@ -387,7 +388,6 @@ nav a:hover {
 }
 
 .duvidas {
-    padding: 40px 20px;
     width: 100%;
     text-align: center;
 }
@@ -404,7 +404,6 @@ nav a:hover {
     color: var(--green-dark);
     font-size: calc(var(--font-size-base) * 1.2);
     font-weight: bold;
-    margin-top: 10px;
     cursor: pointer;
     width: fit-content;
     margin: auto;
@@ -844,6 +843,19 @@ footer img {
 
     footer img {
         width: 100%;
+    }
+
+    .duvidas {
+        margin-top: -50px;
+    }
+
+    .white-background {
+        width: 95%;
+        padding: 1rem 
+    }
+
+    .question {
+        text-align: start;
     }
 }
 
