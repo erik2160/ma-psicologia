@@ -857,6 +857,10 @@ footer img {
     .question {
         text-align: start;
     }
+    
+    .appointment-section {
+        margin-top: -4rem;
+    }
 }
 
 @media (max-width: 550px) {
