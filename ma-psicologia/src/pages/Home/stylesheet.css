@@ -416,7 +416,7 @@ nav a:hover {
 }
 
 .ver-mais-duvidas::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -856,13 +856,13 @@ footer img {
 
     .white-background {
         width: 95%;
-        padding: 1rem 
+        padding: 1rem;
     }
 
     .question {
         text-align: start;
     }
-    
+
     .appointment-section {
         margin-top: -4rem;
     }

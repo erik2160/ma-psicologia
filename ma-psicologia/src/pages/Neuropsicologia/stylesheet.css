@@ -73,7 +73,8 @@ nav a {
     transition: all 0.2s ease-in-out;
     font-weight: 500;
 }
-nav a, .dropdown {
+nav a,
+.dropdown {
     position: relative;
     display: inline-block;
 }

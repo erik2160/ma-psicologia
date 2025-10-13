@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
 
 function closeMenuAndDropdown() {
     menu.classList.remove('active');
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
+    document.querySelectorAll('.dropdown').forEach((dropdown) => {
         dropdown.classList.remove('show');
     });
 }
