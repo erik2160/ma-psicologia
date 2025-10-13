@@ -1,24 +1,36 @@
 const menuIcon = document.getElementById('menu-icon');
 const menu = document.getElementById('menu');
+const header = document.querySelector('header');
+const dropBtn = document.querySelector('.dropbtn');
 
-menuIcon.addEventListener('click', () => {
+menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
     menu.classList.toggle('active');
 });
 
-document.querySelector('.dropbtn').addEventListener('click', function (e) {
-    e.preventDefault(); // Impede comportamento padrão
-    const dropdown = this.parentElement;
+dropBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const dropdown = e.currentTarget.parentElement;
     dropdown.classList.toggle('show');
 });
 
-// Fecha o dropdown se clicar fora
-window.addEventListener('click', function (e) {
-    if (!e.target.matches('.dropbtn')) {
-        document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-            dropdown.classList.remove('show');
-        });
+window.addEventListener('click', (e) => {
+    if (!header.contains(e.target)) {
+        closeMenuAndDropdown();
     }
 });
+
+window.addEventListener('scroll', () => {
+    closeMenuAndDropdown();
+});
+
+function closeMenuAndDropdown() {
+    menu.classList.remove('active');
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('show');
+    });
+}
 
 function scrollToTop() {
     window.scrollTo({
