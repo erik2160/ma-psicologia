@@ -41,7 +41,6 @@ header {
 
 #menu {
     transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(-20px);
 }
 
 .header-logo-image {
@@ -287,6 +286,8 @@ nav a:hover {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .experiencia-grid {

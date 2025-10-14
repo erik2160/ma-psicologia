@@ -37,7 +37,6 @@ header {
 
 #menu {
     transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(-20px);
 }
 
 .header-logo-image {
