@@ -1,5 +1,5 @@
-const whatsappBtn = document.querySelector(".whatsapp-float");
-const contatoBotoes = document.querySelectorAll(".agendar-button");
+const whatsappBtn = document.querySelector('.whatsapp-float');
+const contatoBotoes = document.querySelectorAll('.agendar-button');
 
 let visiveis = new Set();
 
@@ -14,9 +14,9 @@ const observer = new IntersectionObserver((entries) => {
 
     // Se nenhum botão "Entrar em contato" estiver visível, mostra o WhatsApp
     if (visiveis.size === 0) {
-        whatsappBtn.classList.remove("hidden");
+        whatsappBtn.classList.remove('hidden');
     } else {
-        whatsappBtn.classList.add("hidden");
+        whatsappBtn.classList.add('hidden');
     }
 });
 

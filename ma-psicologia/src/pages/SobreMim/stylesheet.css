@@ -39,6 +39,10 @@ header {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+#menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
 .header-logo-image {
     width: 7.5rem;
     height: auto;
@@ -247,7 +251,7 @@ nav a:hover {
 /* Seção Missão e Visão lado a lado */
 .mission-vision-inline {
     background-color: var(--white-basic);
-    padding: 4rem 1rem;
+    padding: auto;
 }
 
 .mission-vision-container {
@@ -282,6 +286,8 @@ nav a:hover {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .experiencia-grid {
@@ -321,6 +327,7 @@ nav a:hover {
 .formacao-container {
     max-width: 900px;
     margin: 0 auto;
+    margin-top: -2rem;
     padding: 2rem 1rem;
 }
 
@@ -378,9 +385,10 @@ nav a:hover {
 /* Seção dos cursos */
 
 .cursos-container {
-    max-width: 1000px;
+    max-width: 870px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: auto;
+    margin-top: -4rem;
     text-align: center;
 }
 
@@ -641,5 +649,23 @@ footer img {
     .valor-card {
         width: 90%;
         flex: 0;
+    }
+
+    .cursos-container {
+        max-width: 380px;
+    }
+
+    .experiencia-container {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 320px) {
+    .cursos-container {
+        max-width: 300px;
+    }
+
+    .experiencia-container {
+        max-width: 300px;
     }
 }

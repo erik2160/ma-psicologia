@@ -1,5 +1,5 @@
-const carouselImages = document.querySelector(".carousel-images");
-const images = document.querySelectorAll(".carousel-images img");
+const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
 
 let index = 0;
 let intervalId;
@@ -11,12 +11,12 @@ carouselImages.appendChild(firstClone);
 function moveToNextImage() {
     index++;
     carouselImages.style.transform = `translateX(${-index * 100}%)`;
-    carouselImages.style.transition = "transform 0.8s ease-in-out";
+    carouselImages.style.transition = 'transform 0.8s ease-in-out';
 
     // Quando chega na última (clone), volta para a primeira
     if (index === images.length) {
         setTimeout(() => {
-            carouselImages.style.transition = "none";
+            carouselImages.style.transition = 'none';
             index = 0;
             carouselImages.style.transform = `translateX(0)`;
         }, 800);

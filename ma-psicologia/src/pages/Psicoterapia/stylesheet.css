@@ -35,6 +35,10 @@ header {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+#menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
 .header-logo-image {
     width: 7.5rem;
     height: auto;
@@ -206,6 +210,9 @@ nav a:hover {
     max-width: 800px;
     padding: 0 1rem;
     margin: 0 auto;
+    /* hyphens: auto;
+    -webkit-hyphens: auto; */
+    text-align: center;
 }
 
 .text-column h1 {

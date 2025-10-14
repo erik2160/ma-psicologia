@@ -1,28 +1,43 @@
-const menuIcon = document.getElementById("menu-icon");
-const menu = document.getElementById("menu");
+const menuIcon = document.getElementById('menu-icon');
+const menu = document.getElementById('menu');
+const header = document.querySelector('header');
+const dropBtn = document.querySelector('.dropbtn');
 
-menuIcon.addEventListener("click", () => {
-    menu.classList.toggle("active");
+menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('active');
 });
 
-document.querySelector(".dropbtn").addEventListener("click", function (e) {
-    e.preventDefault(); // Impede comportamento padrão
-    const dropdown = this.parentElement;
-    dropdown.classList.toggle("show");
+dropBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const dropdown = e.currentTarget.parentElement;
+    dropdown.classList.toggle('show');
 });
 
-window.addEventListener("click", function (e) {
-    if (!e.target.matches(".dropbtn")) {
-        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-            dropdown.classList.remove("show");
-        });
+window.addEventListener('click', (e) => {
+    if (!header.contains(e.target)) {
+        closeMenuAndDropdown();
     }
 });
 
-window.addEventListener("scroll", function () {
-    const header = document.getElementById("header");
-    header.classList.toggle("scrolled", window.scrollY > 0);
+window.addEventListener('scroll', () => {
+    closeMenuAndDropdown();
 });
+
+function closeMenuAndDropdown() {
+    menu.classList.remove('active');
+    document.querySelectorAll('.dropdown').forEach((dropdown) => {
+        dropdown.classList.remove('show');
+    });
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+}
 
 function redirectToPsicoterapiaPage() {
     window.location.href = "../Psicoterapia/index.html";
@@ -34,11 +49,4 @@ function redirectToNeuropsicologiaPage() {
 
 function redirectToDuvidasPage() {
     window.location.href = "../Duvidas/index.html";
-}
-
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
 }

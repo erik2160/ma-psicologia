@@ -51,6 +51,10 @@ main {
     transition: box-shadow 0.3s ease;
 }
 
+#menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
 #header.scrolled {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -255,20 +259,23 @@ nav a:hover {
     align-items: center;
     gap: 6rem;
     padding: 5rem 0;
+    height: auto;
 }
 
 /* CARROSSEL */
 .carousel-section {
     display: flex;
     align-items: start;
-    width: 80%;
+    width: 85%;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .carousel-text {
     flex: 1 1 300px;
-    padding-right: 20px;
+    padding-right: 50px;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .carousel-title {
@@ -387,7 +394,6 @@ nav a:hover {
 }
 
 .duvidas {
-    padding: 40px 20px;
     width: 100%;
     text-align: center;
 }
@@ -404,7 +410,6 @@ nav a:hover {
     color: var(--green-dark);
     font-size: calc(var(--font-size-base) * 1.2);
     font-weight: bold;
-    margin-top: 10px;
     cursor: pointer;
     width: fit-content;
     margin: auto;
@@ -412,7 +417,7 @@ nav a:hover {
 }
 
 .ver-mais-duvidas::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -844,6 +849,23 @@ footer img {
 
     footer img {
         width: 100%;
+    }
+
+    .duvidas {
+        margin-top: -50px;
+    }
+
+    .white-background {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .question {
+        text-align: start;
+    }
+
+    .appointment-section {
+        margin-top: -4rem;
     }
 }
 
