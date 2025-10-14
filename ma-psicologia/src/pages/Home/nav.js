@@ -38,3 +38,15 @@ function scrollToTop() {
         behavior: 'smooth',
     });
 }
+
+function redirectToPsicoterapiaPage() {
+    window.location.href = "../Psicoterapia/index.html";
+}
+
+function redirectToNeuropsicologiaPage() {
+    window.location.href = "../Neuropsicologia/index.html";
+}
+
+function redirectToDuvidasPage() {
+    window.location.href = "../Duvidas/index.html";
+}
